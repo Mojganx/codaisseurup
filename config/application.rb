@@ -20,6 +20,10 @@ module Codaisseurup
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
+
+    # Don't generate system test files.
+    config.generators.system_tests = nil
+
     console do
     ActiveRecord::Base.connection
     end
@@ -27,7 +31,5 @@ module Codaisseurup
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    # Don't generate system test files.
-    config.generators.system_tests = nil
   end
 end
