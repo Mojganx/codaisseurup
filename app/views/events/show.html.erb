@@ -9,7 +9,7 @@
     <!-- Main Info -->
     <h4>Main Info</h4>
     <p>Event Type: <%= @event.description %></p>
-  
+
     <p><%= @event.description%></p>
 
     <!-- About -->
@@ -27,3 +27,8 @@
 </div>
 
 <%= link_to "Back", events_path, class: "btn btn-default" %>
+
+<h4>Themes</h4>
+<% @themes.each do |theme| %>
+  <span class="label label-success"><%= theme.name %></span>
+<% end %>

@@ -25,5 +25,6 @@ class Event < ApplicationRecord
 #  validates :bathroom_count, presence: true
 #  validates :listing_name, presence: true, length: { maximum: 50 }
 #  validates :description, presence: true, length: { maximum: 500 }
+  has_and_belongs_to_many :themes
 
 end
