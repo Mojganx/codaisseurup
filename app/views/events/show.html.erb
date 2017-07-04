@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+
+
+  <div class="panel-body">
+
+    <p>Address: <%= @event.location %></p>
+    <p>Host: <%= @event.user.email %></p>
+
+    <!-- Main Info -->
+    <h4>Main Info</h4>
+    <p>Event Type: <%= @event.description %></p>
+  
+    <p><%= @event.description%></p>
+
+    <!-- About -->
+    <h4>About</h4>
+    <p><%= "A hackathon is a gathering where programmers
+    collaboratively code in an extreme manner over a short period of time." %></p>
+
+    <!-- Amenities -->
+
+
+    </ul>
+
+  </div>
+
+</div>
+
+<%= link_to "Back", events_path, class: "btn btn-default" %>

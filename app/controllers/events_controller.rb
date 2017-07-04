@@ -1,4 +1,4 @@
-class RoomsController < ApplicationController
+class EventsController < ApplicationController
 
   before_action :set_event, only: [:show, :edit, :update]
     before_action :authenticate_user!, except: [:show]
@@ -43,10 +43,9 @@ class RoomsController < ApplicationController
       params
         .require(:event)
         .permit(
-          name:string description:text location:string price:decimal capacity:integer 
-          includes_food:boolean includes_drinks:boolean starts_at:datetime ends_at:datetime
-          active:boolean
-          user:references
+          name:string, description:text, location:string, price:decimal, capacity:integer,
+          includes_food:boolean, includes_drinks:boolean, starts_at:datetime, ends_at:datetime,
+          active:boolean, user:references
         )
     end
 
