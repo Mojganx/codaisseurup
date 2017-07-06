@@ -5,7 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Photo.destroy_all
 Theme.destroy_all
+Event.destroy_all
+Profile.destroy_all
 User.destroy_all
 
 mindfulness = Theme.create(name: "Mindfulness")
@@ -17,7 +21,7 @@ mehdi = User.create(email: "mehdi@gmail.com", password: "qwerty")
 marlou = User.create(email: "marlou@gmail.com", password: "qwerty")
 mojgan = User.create(email: "mojgan@gmail.com", password: "qwerty")
 
-Event.create(
+event1 = Event.create!(
           name: "Game Night",
           description: "Fun and Competative",
           location: "Mehdi en Marlou's Casa",
@@ -32,7 +36,7 @@ Event.create(
           themes: [entertainment, sports]
           )
 
-Event.create(
+event2 = Event.create!(
           name: "Clothes swap",
           description: "Inspiring",
           location: "Fashion Institute",
@@ -47,22 +51,7 @@ Event.create(
           themes: [entertainment, fashion]
           )
 
-
-
-
-# User.destroy_all
-#
-# mojgan = User.create(email: "mojgan.zolghadr@gmail.com", password: "qwerty")
-#
-# event = Event.create!(
-#     name:"Hackaton",
-#     description:"A day of fun and hacking",
-#     location:"Singel 542",
-#     price:0,
-#     capacity:20,
-#     includes_food:true,
-#     includes_drinks:true,
-#     starts_at: DateTime.new(2018,02,03),
-#     ends_at: DateTime.new(2019,05,07),
-#     active:true,
-#     user:mojgan)
+photo1 = Photo.create!(remote_image_url: "https://res.cloudinary.com/mojgan/image/upload/v1499346731/Schermafbeelding-2015-08-06-om-18.55.10_kgdvmv.png", event: event1)
+photo2 = Photo.create!(remote_image_url: "https://res.cloudinary.com/mojgan/image/upload/v1499346731/gamenight_hsrxlm.jpg", event: event1)
+photo3 = Photo.create!(remote_image_url: "https://res.cloudinary.com/mojgan/image/upload/v1499346731/download_m3nlil.jpg", event: event2)
+photo4 = Photo.create!(remote_image_url: "https://res.cloudinary.com/mojgan/image/upload/v1499346731/201109-orig-clothing-swap-949x534_dx7cnj.jpg", event: event2)

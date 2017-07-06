@@ -26,5 +26,5 @@ class Event < ApplicationRecord
 #   #to make sure both dates are entered and check if the end date is at least one day after the start date.
 
 #   has_and_belongs_to_many :themes
-#
+  has_many :photos
  end
