@@ -3,19 +3,29 @@
 
   <div class="panel-body">
 
-    <p>Address: <%= @event.location %></p>
-    <p>Host: <%= @event.user.email %></p>
-
     <!-- Main Info -->
     <h4>Main Info</h4>
-    <p>Event Type: <%= @event.description %></p>
+        <p>Event Name: <%= @event.name %></p>
+        <p>Event Description: <%= @event.description %></p>
+        <p>Event Location: <%= @event.location %></p>
+        <p>Event Price: <%= @event.price %></p>
+        <p>Event Capacity: <%= @event.capacity %></p>
+        <p>Event Food: <%= @event.includes_food %></p>
+        <p>Event Drinks: <%= @event.includes_drinks %></p>
+        <p>Event Starts at: <%= @event.starts_at %></p>
+        <p>Event Ends at: <%= @event.ends_at %></p>
+
+
+    <!-- <p>Host: <%= @event.user.email %></p> -->
+    <!-- <p>Event Name: <%= @event.name %></p>
+    <p>Event Type: <%= @event.description %></p> -->
 
     <p><%= @event.description%></p>
 
     <!-- About -->
-    <h4>About</h4>
+    <!-- <h4>About</h4>
     <p><%= "A hackathon is a gathering where programmers
-    collaboratively code in an extreme manner over a short period of time." %></p>
+    collaboratively code in an extreme manner over a short period of time." %></p> -->
 
     <!-- Amenities -->
 

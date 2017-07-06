@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :event do
-    name              "Game On"
+    name              "Game Night"
     description       "Fun"
     location          "My place"
     price             { Faker::Commerce.price }

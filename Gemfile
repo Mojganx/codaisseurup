@@ -40,6 +40,7 @@ group :development, :test do
   gem 'factory_girl_rails', '4.7.0'
   gem 'faker', '1.6.6'
   gem 'pry', '~> 0.10.4'
+  gem 'shoulda-matchers', '~> 3.1'
 
 end
 
