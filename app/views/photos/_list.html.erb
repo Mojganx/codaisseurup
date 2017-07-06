@@ -1,0 +1,30 @@
+
+
+<% if @photos %>
+  <% @photos.each do |photo| %>
+    <div class="panel panel-default">
+      <div class="panel-heading preview">
+        <%= image_tag photo.image.thumbnail %>
+      </div>
+      <div class="panel-body">
+    <%= link_to "Delete", root_path( photo.id ),
+    class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" } %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+
+
+
+<!-- <% if @photos %>
+  <% @photos.each do |photo| %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= image_tag photo.image %>
+      </div>
+      <div class="panel-body">
+        <span class="btn btn-default">Delete</span>
+      </div>
+    </div>
+  <% end %>
+<% end %> -->

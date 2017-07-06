@@ -64,6 +64,10 @@ class EventsController < ApplicationController
       @event = Event.find(params[:id])
     end
 
+    def image_params
+      params[:images].present? ? params.require(:images) : []
+    end
+
 
     def event_params
 
