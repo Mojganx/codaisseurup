@@ -12,6 +12,7 @@ class EventsController < ApplicationController
     def show;
       @themes = @event.themes
       @photos = @event.photos
+      @bookings = @event.bookings
     end
 
     def new
