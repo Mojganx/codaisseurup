@@ -13,5 +13,8 @@ Rails.application.routes.draw do
       resources :bookings, only: [:create]
     end
 
+    namespace :api do
+      resources :events #, only: [:index, :show, :create, :edit, :new]
+    end
 
 end
